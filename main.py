@@ -31,3 +31,4 @@ graph.render("karlo")
 
 #install sklearn, scipy, numpy and graphviz
 #dan, sat, jel ima para, jel ima pljugi, jel zapalio
+#https://www.google.hr/search?ei=5S7FWtuGKszMwALPibPACQ&q=google+machine+learning+recipes&oq=google+machine+learning+rec&gs_l=psy-ab.3.0.35i39k1j0i22i30k1.1895.2516.0.3580.4.4.0.0.0.0.238.560.0j2j1.3.0....0...1c.1.64.psy-ab..1.3.559...0j0i67k1.0.a3lB8JmyQ0M
