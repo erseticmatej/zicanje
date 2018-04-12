@@ -1,4 +1,5 @@
 import csv
+import pygame.mixer as pgm
 from sklearn import tree
 
 X = []
@@ -18,10 +19,16 @@ test = list(map(int, input().split()))
 
 predictions = clf.predict([test])
 if test[3] == 0 and predictions[0] == 1:
+    pgm.init()
+    pgm.music.load('Jane jesi kratak.mp3')
+    pgm.music.play()
     print("Jane, jesi kratak")
 elif predictions[0] == 1:
     print("Pusio je svoje pljuge")
 else:
+    pgm.init()
+    pgm.music.load('Nije pusio.mp3')
+    pgm.music.play()
     print("Nije pusio")
 
 import graphviz
@@ -29,7 +36,7 @@ dot_data = tree.export_graphviz(clf, out_file=None)
 graph = graphviz.Source(dot_data)
 graph.render("karlo")
 
-#install sklearn, scipy, numpy and graphviz
+#install sklearn, scipy, numpy , graphviz, pygame
 #dan, sat, jel ima para, jel ima pljugi, jel zapalio
 #https://github.com/machine-learning-projects/machine-learning-recipes
 #http://scikit-learn.org/stable/modules/tree.html#tree-classification
